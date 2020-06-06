@@ -1,10 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Avatar, Username, Container} from './styles'
 
-export const UserInformation = props =>
-(
+export const UserInformation = props =>{
+   const [url, setUrl] = useState(props.avatar)
+   function handleChange(e) {
+       setUrl(e.target.value);
+   }
+return (
     <Container>
-        <Avatar className="UserInformation__Avatar" src={props.avatar} alt="User avatar"></Avatar>
-        <Username className="UserInformation__Name">{props.name}</Username>
+        <Avatar src={url} alt="User avatar"></Avatar>
+        <Username>{props.name}</Username>
+        <input onChange={handleChange}></input>
     </Container>
 )
+}
