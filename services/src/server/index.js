@@ -1,1 +1,2 @@
-import "./server"
+require("dotenv").config();
+import "./server";

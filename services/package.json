@@ -12,7 +12,11 @@
     "watch": "babel-watch src/index.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "apollo-server": "^2.14.3",
+    "apollo-server-express": "^2.14.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "graphql": "^15.1.0"
   },
   "repository": {
     "type": "git",
