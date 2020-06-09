@@ -1,0 +1,32 @@
+{
+  "name": "acnh-collection-services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-watch": "^7.0.0"
+  },
+  "scripts": {
+    "watch": "babel-watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psspqssq/acnh-collection-album.git"
+  },
+  "keywords": [
+    "acnh",
+    "collection",
+    "album"
+  ],
+  "author": "Pablo Silva",
+  "bugs": {
+    "url": "https://github.com/psspqssq/acnh-collection-album/issues"
+  },
+  "homepage": "https://github.com/psspqssq/acnh-collection-album#readme",
+  "description": ""
+}
