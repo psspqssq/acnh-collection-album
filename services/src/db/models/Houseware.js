@@ -15,7 +15,7 @@ export const nameSchema = new mongoose.Schema(
     "name-TWzh": String,
     "name-JPja": String,
     "name-KRko": String,
-    "name-EUru": String
+    "name-EUru": String,
   },
   { _id: false }
 );
@@ -40,26 +40,26 @@ export const dataSchema = new mongoose.Schema(
     "hha-concept-2": String,
     "hha-series": String,
     "hha-set": String,
-    isInteractive: Boolean,
+    isInteractive: String,
     tag: String,
     isOutdoor: Boolean,
     "speaker-type": String,
     "lighting-type": String,
-    isCatalog: Boolean,
+    isCatalog: String,
     "file-name": String,
     "variant-id": String,
     "internal-id": Number,
     name: nameSchema,
     "buy-price": Number,
     "sell-price": Number,
-    image_uri: String
+    image_uri: String,
   },
   { _id: false }
 );
 
 export const housewareSchema = new mongoose.Schema({
   name: String,
-  data: [dataSchema]
+  data: [dataSchema],
 });
 
 const Houseware = mongoose.model("Item-Houseware", housewareSchema);
