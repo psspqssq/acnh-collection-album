@@ -1,11 +1,13 @@
 module.exports = {
   presets: ["@babel/env"],
   plugins: [
-    "module-resolver",
-    {
-      alias: {
-        "#root": "./src",
-      },
-    },
-  ],
+    [
+      "module-resolver",
+      {
+        alias: {
+          "#root": "./src"
+        }
+      }
+    ]
+  ]
 };
