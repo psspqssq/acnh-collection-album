@@ -5,9 +5,10 @@ module.exports = {
       "module-resolver",
       {
         alias: {
-          "#root": "./src"
-        }
-      }
-    ]
-  ]
+          "#root": "./src",
+        },
+      },
+    ],
+    "@babel/plugin-transform-runtime",
+  ],
 };

@@ -1,4 +1,4 @@
-#**Setting up the server**
+# **Setting up the server**
 
 - Create .env file on ./services with the DB_URL of your local server.
 
