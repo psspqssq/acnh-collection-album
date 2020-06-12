@@ -5,13 +5,13 @@ import "#root/db/connection";
 import Houseware from "#root/db/models/Houseware";
 
 const axiosAC = axios.create({
-  baseURL: process.env.ACNH_API_URL,
+  baseURL: process.env.ACNH_API_URL
 });
 
 axiosAC.interceptors.response.use((res) => {
   res = Object.keys(res.data).map((houseware) => ({
     name: houseware,
-    data: res.data[houseware],
+    data: res.data[houseware]
   }));
   return res;
 });
