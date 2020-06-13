@@ -1,9 +1,10 @@
 import bodyParser from "body-parser";
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
+import { gql } from "apollo-server";
 
-import resolvers from "#root/graphql/housewareResolver";
-import typeDefs from "#root/graphql/typeDefs";
+import typeDefs from "../graphql/schemas/houseware.js";
+import resolvers from "../graphql/resolvers/houseware.js";
 
 const port = process.env.PORT || 3000;
 

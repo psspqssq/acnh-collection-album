@@ -1,4 +1,4 @@
-import * as Query from "./builtInTypes/Query";
+import * as Query from "../Queries";
 
 const resolvers = {
   Query,

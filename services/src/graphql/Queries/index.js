@@ -16,4 +16,5 @@ fs.readdirSync(__dirname)
 export default () => fieldsObj;
 */
 
+export { default as houseware } from "./houseware";
 export { default as housewares } from "./housewares";

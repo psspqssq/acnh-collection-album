@@ -9,6 +9,7 @@ const axiosAC = axios.create({
 });
 
 axiosAC.interceptors.response.use((res) => {
+  //houseware object contains the current key on the map function
   res = Object.keys(res.data).map((houseware) => ({
     name: houseware,
     data: res.data[houseware]
