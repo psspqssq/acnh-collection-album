@@ -2,4 +2,5 @@ services/node_modules
 acnh-collection-album/node_modules
 acnh-collection-album/dist
 acnh-collection-album/.cache
+acnh-collection-album/build
 .env
