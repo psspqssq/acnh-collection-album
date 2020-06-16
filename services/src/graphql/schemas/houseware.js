@@ -1,9 +1,4 @@
 import { gql } from "apollo-server";
-const {
-  makeExecutableSchema,
-  addMockFunctionsToSchema,
-  mergeSchemas
-} = require("graphql-tools");
 
 const typeDefs = gql`
   type Houseware {
@@ -14,7 +9,7 @@ const typeDefs = gql`
 
   type Query {
     houseware(name: String!): Houseware!
-    housewares: [Houseware!]!
+    housewares(searchByName: String, languages: [String]): [Houseware!]!
   }
 
   type HousewareData {

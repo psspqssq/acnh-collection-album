@@ -1,7 +1,6 @@
-import bodyParser from "body-parser";
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import { gql } from "apollo-server";
+import cors from "cors";
 
 import typeDefs from "../graphql/schemas/houseware.js";
 import resolvers from "../graphql/resolvers/houseware.js";
@@ -10,14 +9,19 @@ const port = process.env.PORT || 3000;
 
 const apolloServer = new ApolloServer({
   resolvers,
-  typeDefs
+  typeDefs,
 });
 
 const app = express();
 
-apolloServer.applyMiddleware({ app, path: "/graphql" });
+app.use(
+  cors({
+    origin: (origin, cb) => cb(null, true),
+    credentials: true,
+  })
+);
 
-//app.use("/graphql", bodyParser.json());
+apolloServer.applyMiddleware({ app, cors: false, path: "/graphql" });
 
 app.all("*", (req, res) => {
   res.status(404).json({ status: "Missing endpoint" });

@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Menu } from "./components/Menu";
 import * as serviceWorker from "./serviceWorker";
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("serviceWorker.js");
-}
+import { ApolloProvider } from "react-apollo";
+import graphqlClient from "./api/graphql";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Menu />
+    <ApolloProvider client={graphqlClient}>
+      <BrowserRouter>
+        <Menu />
+      </BrowserRouter>
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
